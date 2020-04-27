@@ -31,7 +31,7 @@ public class AIController : MonoBehaviour
 
     Queue<Transform> points;
 
-    public bool Passed {get {return passed;} set {passed = value;}}
+    //public bool Passed {get {return passed;} set {passed = value;}}
     
 
     // Start is called before the first frame update

@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 #endif
 namespace GSD.Roads {
 #if UNITY_EDITOR
-    public static class GSDUnitTests
+    public static class GSDUnitTests 
     {
         private static GSDRoadSystem RoadSystem;
 

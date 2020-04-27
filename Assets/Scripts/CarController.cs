@@ -24,13 +24,13 @@ public class CarController : MonoBehaviour
 
     public void Steer()
     {
-        m_steerAngle = maxSteerAngle*m_horizontalMov;
+        m_steerAngle = maxSteerAngle*m_horizontalMov*0.8f;
         if (m_verticalMov<0) 
         {
-            BL.steerAngle = -m_steerAngle*1.1f*0.8f;
-            BR.steerAngle = -m_steerAngle*1.1f*0.8f;
-            FL.steerAngle = -m_steerAngle*1.1f*0.8f;
-            FR.steerAngle = -m_steerAngle*1.1f*0.8f;
+            BL.steerAngle = -m_steerAngle*1.1f;
+            BR.steerAngle = -m_steerAngle*1.1f;
+            FL.steerAngle = -m_steerAngle*1.1f;
+            FR.steerAngle = -m_steerAngle*1.1f;
         }
         else
         {
