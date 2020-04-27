@@ -107,10 +107,10 @@ public class AIController : MonoBehaviour
             else
                 m_verticalMov = 1f;
 
-            Debug.Log(_neededAngle);
-            Debug.Log(_currentRot);
-            Debug.Log(_absolute); 
-            Debug.Log(m_horizontalMov); 
+            //Debug.Log(_neededAngle);
+            //Debug.Log(_currentRot);
+            //Debug.Log(_absolute); 
+            //Debug.Log(m_horizontalMov); 
         }
         else
         {
@@ -201,7 +201,8 @@ public class AIController : MonoBehaviour
         if(passed)
         {
             Debug.Log(point.name);
-            points.Dequeue();
+            if (points.Count !=0 )
+                points.Dequeue();
             passed = false;
             driftTime = DRIFT;
             waitTime = WAIT;
