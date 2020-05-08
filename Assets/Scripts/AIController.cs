@@ -81,7 +81,7 @@ public class AIController : MonoBehaviour
 
             float _absolute = Math.Abs(_neededAngle - _currentRot);
 
-            if (_absolute<15.0f)
+            if (_absolute<15.0f || _absolute>345.0f)
                 m_horizontalMov = 0.0f;
 
             else if (_neededAngle > _currentRot)
@@ -89,28 +89,29 @@ public class AIController : MonoBehaviour
             else 
                 m_horizontalMov = -0.3f;
 
-            if (_absolute > 180.0f)
+            if (_absolute > 180.0f || _absolute < -180.0f)
                 m_horizontalMov = -m_horizontalMov;
 
 
             /////vertical and drift part
             if (driftTime>0){
                 m_verticalMov = -1;
-                Debug.Log(driftTime);
+                //Debug.Log(driftTime);
                 driftTime -= 1;
             }
             else if(waitTime>0){
-                Debug.Log(waitTime);
+                //Debug.Log(waitTime);
                 m_verticalMov = 0;
                 waitTime -= 1;
             }
             else
                 m_verticalMov = 1f;
 
-            //Debug.Log(_neededAngle);
-            //Debug.Log(_currentRot);
-            //Debug.Log(_absolute); 
-            //Debug.Log(m_horizontalMov); 
+            //Debug.Log("need " + _neededAngle);
+            //Debug.Log("curr " + _currentRot);
+            //Debug.Log("name " + point.name);
+            Debug.Log(_absolute); 
+            //Debug.Log(m_horizontalMov);
         }
         else
         {

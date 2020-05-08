@@ -4,11 +4,13 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: FlakesPaint
   m_Shader: {fileID: 4800000, guid: a43c2982724d8994e9cee1628a1979be, type: 3}
-  m_ShaderKeywords: Decal_NON Flakes Flanks REF _EMISSION _REFLECTONCOLOROVERRIDE_ON
+  m_ShaderKeywords: Decal_NON Flakes Flanks REF _EMISSION _REFLECTIONCOLOROVERRIDE_ON
+    _REFLECTONCOLOROVERRIDE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -118,6 +120,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ReflectionCubeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ReflectionMap:
         m_Texture: {fileID: 8900000, guid: 8b5e3f0ab0510a64385f5b656728141c, type: 2}
         m_Scale: {x: 1, y: 1}
@@ -187,6 +193,10 @@ Material:
     - _Glossiness: 0.4
     - _MainTexNormalScale: 1
     - _Metallic: 0.6
+    - _ReflectionBlur: 1
+    - _ReflectionColorOverride: 1
+    - _ReflectionExponent: 0.5
+    - _ReflectionIntensity: 0.75
     - _ReflectionStrength: 0.28571427
     - _ReflectonBlur: 1
     - _ReflectonColorOverride: 1
